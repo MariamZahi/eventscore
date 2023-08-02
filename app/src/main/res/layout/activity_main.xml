@@ -14,7 +14,8 @@
         android:textSize="18sp"
         android:layout_marginTop="8dp"
         android:padding="16dp"
-        android:background="@color/textViewBackground" />
+        android:background="@color/textViewBackground"
+        android:gravity="center"/>
 
     <TextView
         android:id="@+id/team1NameTextView"
