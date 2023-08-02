@@ -5,6 +5,31 @@ import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
+
+class YourActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        val nightModeEnabled = true
+        val version2Enabled = true
+
+            if (nightModeEnabled) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                recreate()
+            } else if (version2Enabled) {
+                setContentView(R.layout.activity_your_version2)
+            } else {
+                setContentView(R.layout.activity_your)
+            }
+
+        // Initialize and set up your activity here
+    }
+}
+
 
 class MainActivity : AppCompatActivity() {
 
