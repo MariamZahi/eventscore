@@ -8,4 +8,100 @@
     android:background="?attr/colorPrimary"> <!-- Use the colorPrimary attribute from the current theme -->
     >
 
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="?attr/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SCOREKEEPING"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="18sp"
+            android:layout_marginTop="8dp"
+            android:padding="16dp"
+            android:background="@color/textViewBackground"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/team1NameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="US"
+            android:textSize="20sp"
+            android:background="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/team2NameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="France"
+            android:textSize="20sp"
+            android:background="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/team1ScoreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="24sp"
+            android:background="@color/white"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/team2ScoreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="24sp"
+            android:background="@color/white"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/team1IncreaseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Increase"
+            android:layout_marginTop="16dp"
+            android:onClick="increaseScoreTeam1"/>
+
+        <Button
+            android:id="@+id/team1DecreaseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Decrease"
+            android:layout_marginTop="16dp"
+            android:onClick="decreaseScoreTeam1"/>
+
+        <Button
+            android:id="@+id/team2IncreaseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Increase"
+            android:layout_marginTop="16dp"
+            android:onClick="increaseScoreTeam2"/>
+
+        <Button
+            android:id="@+id/team2DecreaseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Decrease"
+            android:layout_marginTop="16dp"
+            android:onClick="decreaseScoreTeam2"/>
+
+        <EditText
+            android:id="@+id/customScoreIncrementEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:inputType="number"
+            android:hint="Custom Increment"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
