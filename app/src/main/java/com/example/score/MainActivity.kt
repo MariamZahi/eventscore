@@ -1,5 +1,6 @@
 package com.example.score
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View
@@ -145,4 +146,23 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this, developerInfo, Toast.LENGTH_LONG).show()
     }
 }
+override fun onOptionsItemSelected(item: MenuItem): Boolean {
+    when (item.itemId) {
+        R.id.action_about -> {
+            showAboutInfo()
+            return true
+        }
+        R.id.action_settings -> {
+            val settingsIntent = Intent(this, SettingsActivity::class.java)
+            startActivity(settingsIntent)
+            return true
+        }
+        else -> return super.onOptionsItemSelected(item)
+    }
+}
+
+fun showAboutInfo() {
+    TODO("Not yet implemented")
+}
+
 
