@@ -6,6 +6,10 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatDelegate
+import android.view.Menu
+import android.view.MenuItem
+
+
 
 class YourActivity : AppCompatActivity() {
 
@@ -81,6 +85,33 @@ class MainActivity : AppCompatActivity() {
         val incrementText = customScoreIncrementEditText.text.toString()
         if (incrementText.isNotEmpty()) {
             customScoreIncrement = incrementText.toInt()
+        }
+    }
+}
+
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+    //For menu visibility
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.action_about -> {
+
+                return true
+            }
+            //For click responses
+            R.id.action_settings ->
+                return true
+            }
+            else -> return super.onOptionsItemSelected(item)
         }
     }
 }
