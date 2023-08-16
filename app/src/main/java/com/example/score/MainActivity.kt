@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatDelegate
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 
 
 
@@ -115,3 +116,33 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.action_about -> {
+                showAboutInfo()
+                return true
+            }
+            // Handle other menu items if needed
+            else -> return super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun showAboutInfo() {
+        val developerInfo = "Developer: Your Name\nCourse: Your Course Code"
+        Toast.makeText(this, developerInfo, Toast.LENGTH_LONG).show()
+    }
+}
+
